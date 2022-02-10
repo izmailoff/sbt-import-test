@@ -21,3 +21,5 @@ Run the SBT task:
       }
     })
 
+# Explanation
+https://stackoverflow.com/questions/70942473/sbt-task-to-load-system-environment-variables
