@@ -1,5 +1,5 @@
 # sbt-import-test
-Example of how to import and use an external library in SBT.
+An example of how to import and use an external library in SBT and to set environment variables for an app from SBT command.
 
 # Usage
 Run SBT from your OS shell:
