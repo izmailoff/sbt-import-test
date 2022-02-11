@@ -36,5 +36,9 @@ object Config {
     def toEnv(conf: System): Map[String, String] = {
       Map(s"service.${conf.system.service}" -> conf.system.port.toString)
     }
+
+    def prettyPrint(x: Map[String, String]): String = {
+      "Map(" + (x.map{ case (k, v) => s""""${k}"->"${v}"""" }).mkString(", ") + ")"
+    }
 }
 

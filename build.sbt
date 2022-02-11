@@ -1,4 +1,3 @@
-
 ThisBuild / scalaVersion := "2.13.8"
 
 ThisBuild / organization := "com.example"
@@ -13,8 +12,8 @@ lazy val hello = (project in file("."))
   )
 
 commands += Command.command("loadDevEnv") { state =>
-  //Config.getEnvFromConf()
-  val env = """Map("service.name" -> "123")"""
-  s"set envVars ++= ${env}" :: state
+  val env = Config.getEnvFromConf()
+  val envStr = Config.prettyPrint(env)
+  s"set envVars ++= ${envStr}" :: state
 }
 
